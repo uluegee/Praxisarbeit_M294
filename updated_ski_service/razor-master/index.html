@@ -24,7 +24,7 @@
 <!-- Top navigation -->
 <nav class="navbar navbar-expand-md fixed-top top-nav">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="index.html"><strong>Ski-Service</strong></a>
+		<a class="navbar-brand" href="index.html"><strong>JetStream Ski-Service</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
 		</button>
@@ -267,116 +267,7 @@
 		</div>
 	</div>
 </section>
-<!-- Login -->
-<section id="login" class="py-5" style="background-color: #535353;">
-    <div class="container">
-        <div class="card shadow p-4 mb-3 mx-auto" style="max-width: 400px;" style="max-height: 500px;">
-            <h2 class="text-center mb-4">Login</h2>
-            <form action="/login" method="post">
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-Mail-Adresse</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail-Adresse" required>
-                </div>
-				
-                <div class="mb-3">
-                    <label for="password" class="form-label">Passwort</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Passwort" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Anmelden</button>
-            </form>
-            <p class="text-center mt-3">
-                Noch kein Konto? <a href="#register">Registrieren</a>
-            </p>
-        </div>
-    </div>
-</section>
 
-<!-- Registrierung -->
-<section id="register" class="py-5" style="background-color: #626262;">
-    <div class="container">
-        <div class="card shadow p-4 mb-3 mx-auto" style="max-width: 400px;">
-            <h2 class="text-center mb-4">Registrieren</h2>
-            <form action="/register" method="post">
-                <div class="mb-3">
-                    <label for="username" class="form-label">Benutzername</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Benutzername" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email-register" class="form-label">E-Mail-Adresse</label>
-                    <input type="email" class="form-control" id="email-register" name="email" placeholder="E-Mail-Adresse" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password-register" class="form-label">Passwort</label>
-                    <input type="password" class="form-control" id="password-register" name="password" placeholder="Passwort" required>
-                </div>
-                <div class="mb-3">
-                    <label for="confirm-password" class="form-label">Passwort bestätigen</label>
-                    <input type="password" class="form-control" id="confirm-password" name="confirm_password" placeholder="Passwort bestätigen" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 text-white">Konto erstellen</button>
-            </form>
-            <p class="text-center mt-3">
-                Schon ein Konto? <a href="#login">Einloggen</a>
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="service-form" class="py-5" style="background-color: #676767;">
-    <div class="container">
-        <h1 class="text-center mb-4 text-primary">Service buchen</h1>
-        <div class="card shadow p-4">
-            <form action="/submit-service" method="post">
-                <!-- Persönliche Informationen -->
-                <h2 class="mb-3">Ihre Informationen</h2>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Ihr Name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-Mail-Adresse</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Telefonnummer</label>
-                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Ihre Telefonnummer" required>
-                </div>
-
-                <!-- Service-Auswahl -->
-                <h2 class="mb-3">Service auswählen</h2>
-                <div class="mb-3">
-                    <label for="service" class="form-label">Service</label>
-                    <select class="form-select" id="service" name="service" required>
-                        <option value="ski-waxing">Kleiner Service - CHF 40</option>
-                        <option value="edge-sharpening">Grosser Service - CHF 55</option>
-                        <option value="binding-check">Rennski Service - CHF 35</option>
-                        <option value="complete-service">Bindung montieren und einstellen - CHF 150</option>
-						<option value="fell-zuschneiden">Fell zuschneiden - CHF 80</option>
-						<option value="heisswachsen">Heisswachsen - CHF 65</option>
-                    </select>
-                </div>
-
-                <!-- Schnellservice oder Normal -->
-                <h2 class="mb-3">Bearbeitungszeit</h2>
-                <div class="mb-3">
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" id="normal-service" name="timeframe" value="normal" required>
-                        <label for="normal-service" class="form-check-label">Normal (7 Tage)</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" id="express-service" name="timeframe" value="express">
-                        <label for="express-service" class="form-check-label">Schnellservice (3 Tage)</label>
-                    </div>
-                </div>
-
-                <!-- Abschicken -->
-                <div class="mt-4">
-                    <button type="submit" class="btn btn-primary w-100">Service buchen</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
 
 
 
