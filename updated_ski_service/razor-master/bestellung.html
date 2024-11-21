@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ski Service Ski</title>
+    <!-- bootstrap Style CSS File -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Custom Style CSS File -->
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.css" />
+    <!-- Font-Awesome Style CSS File -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="font-awesome/css/font-awesome.min.css"
+    />
+    <style>
+      /* Optimiertes Styling für das Formular */
+      #service-form .form-control,
+      #service-form .form-select,
+      #service-form .form-check-input {
+        background-color: transparent; /* Entfernt Hintergrund */
+        border: 1px solid #ccc; /* Leichte Rahmenlinie */
+        color: #333; /* Dunkler Text */
+      }
+
+      #service-form .form-control:focus,
+      #service-form .form-select:focus,
+      #service-form .form-check-input:focus {
+        box-shadow: none; /* Entfernt Fokus-Schattierung */
+        border-color: #007bff; /* Fokusfarbe */
+      }
+
+      #service-form button {
+        background-color: #007bff; /* Standard-Bootstrap-Blau */
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      #service-form button:hover {
+        background-color: #0056b3; /* Dunkleres Blau bei Hover */
+      }
+
+      .card {
+        border: none; /* Entfernt Rahmen um die Karte */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Weicher Schatten */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page loading animation -->
+    <div class="loader loader-bg">
+      <div class="loader-inner ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md fixed-top top-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><strong>Ski-Service</strong></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="img/icons/menu.png"
+          /></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto text-sm-right text-md-right">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Über uns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Registrieren</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bestellung.html">Service buchen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section
+      id="home"
+      class="intro bg-overlay parallax"
+      style="
+        background-image: url(img/skifahrerbild.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%vw;
+        height: 100vh;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
+            <div class="intro-caption mt-5">
+              <h1 class="text-primary mb-2">
+                Perfekte Kanten. Sicherer Halt. Unvergessliche Abfahrten
+              </h1>
+              <p class="text-white mb-4">
+                Ski-Service für deine besten Wintermomente!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Booking Form -->
+    <section id="service-form" class="py-5" style="background-color: gray">
+      <div class="container">
+        <div class="card shadow-lg border-0 p-4">
+          <form
+            action="/submit-service"
+            method="post"
+            style="padding: 30px"
+            onsubmit="handleFormSubmit(event)"
+          >
+            <!-- Überschrift -->
+            <h1 class="text-center mb-4 text-primary">Service buchen</h1>
+
+            <!-- Persönliche Informationen -->
+            <h4 class="mb-3">Persönliche Informationen</h4>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Ihr Name"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">E-Mail-Adresse</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Ihre E-Mail-Adresse"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefonnummer</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="Ihre Telefonnummer"
+                required
+              />
+            </div>
+
+            <!-- Radio Buttons -->
+            <h4 class="mb-3">Service auswählen</h4>
+            <div class="mb-3" style="margin-left: 20px">
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="option1"
+                  name="selection"
+                  value="Kleiner Service"
+                  required
+                />
+                <label for="option1" class="form-check-label"
+                  >Kleiner Service</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="option2"
+                  name="selection"
+                  value="Grosser Service"
+                />
+                <label for="option2" class="form-check-label"
+                  >Grosser Service</label
+                >
+              </div>
+            </div>
+
+            <!-- Checkboxen -->
+            <h4 class="mb-3">Zusätzliche Optionen</h4>
+            <div class="mb-3" style="margin-left: 20px">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="checkbox1"
+                  name="additionalOptions"
+                  value="Rennski-Service"
+                />
+                <label for="checkbox1" class="form-check-label"
+                  >Rennski-Service</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="checkbox2"
+                  name="additionalOptions"
+                  value="Fell zuschneide"
+                />
+                <label for="checkbox2" class="form-check-label"
+                  >Fell zuschneiden</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="checkbox3"
+                  name="additionalOptions"
+                  value="Heisswachsen"
+                />
+                <label for="checkbox3" class="form-check-label"
+                  >Heisswachsen</label
+                >
+              </div>
+            </div>
+
+            <!-- Dropdown -->
+            <h4 class="mb-3">Bearbeitungszeit</h4>
+            <div class="mb-3">
+              <label for="specialities" class="form-label">Spezialitäten</label>
+              <select
+                class="form-select"
+                id="specialities"
+                name="specialities"
+                required
+              >
+                <!-- Standardoption -->
+                <option value="" selected disabled>
+                  Bitte wählen Sie eine Option
+                </option>
+                <!-- Weitere Optionen -->
+                <option value="normal">Normal (7 Tage)</option>
+                <option value="express">Schnellservice (3 Tage)</option>
+                <option value="standard">Standard (5 Tage)</option>
+              </select>
+            </div>
+
+            <!-- Abschicken -->
+            <div class="mt-4">
+              <button type="submit" class="btn btn-primary w-100">
+                Service buchen
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="copy-footer bg-primary py-2">
+      <div class="container text-center text-light">
+        &copy; <a href="" target="_blank">Ski-Service.com</a>
+        <span id="year"></span>. Alle Rechte Behalten.
+      </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/server.js"></script>
+  </body>
+</html>

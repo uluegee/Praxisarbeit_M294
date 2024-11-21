@@ -2,54 +2,89 @@ function validateEmail(email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
 }
- 
+
 function validatePhone(phone) {
     const phonePattern = /^[0-9\s+()-]{7,15}$/;
     return phonePattern.test(phone);
 }
- 
+
 function handleFormSubmit(event) {
     event.preventDefault();
- 
-   
-    const name = document.getElementById('customerName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const priority = document.getElementById('priority').value;
-    const service = document.getElementById('service').value;
-    const pickup_Date = new Date().toISOString();  
- 
-     // Validierung und Senden der Daten an den Server
-    if (validateEmail(email) && validatePhone(phone)) {
-        const data = {
-            name,
-            email,
-            phone,
-            priority,
-            service,
-            pickup_Date,
-            submission_Date: new Date().toISOString().split('T')[0]
-        };
- 
-        // Server-Aufruf mit angepasstem API-Endpunkt
-        fetch('http://localhost:5000/api/registration', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
+
+    // Eingaben aus dem Formular holen
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const allgemeinservice = document.querySelector('input[name="selection"]:checked')?.value;
+    const priority = document.getElementById('specialities').value;
+    const additionalOptions = Array.from(
+        document.querySelectorAll('input[name="additionalOptions"]:checked')
+    ).map(option => option.value);
+
+    const service = `Service: ${allgemeinservice}, Additional Options: ${additionalOptions.join(', ')}`;
+
+
+    // Validierung der Eingaben
+    if (!validateEmail(email)) {
+        alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+        return;
+    }
+
+    if (!validatePhone(phone)) {
+        alert('Bitte geben Sie eine gültige Telefonnummer ein.');
+        return;
+    }
+
+    if (!service) {
+        alert('Bitte wählen Sie einen Service aus.');
+        return;
+    }
+
+    if (!priority) {
+        alert('Bitte wählen Sie eine Bearbeitungszeit aus.');
+        return;
+    }
+
+    // Datum erstellen
+    const currentDate = new Date();
+    const pickupDate = new Date();
+    pickupDate.setDate(currentDate.getDate() + (priority === 'express' ? 3 : priority === 'normal' ? 7 : 5));
+
+    // Daten vorbereiten
+    const data = {
+        name,
+        email,
+        phone,
+        priority: priority.charAt(0).toUpperCase() + priority.slice(1), // Capitalize (Standard, Normal, Express)
+        service,
+        additionalOptions, // Optionale zusätzliche Services
+        create_date: currentDate.toISOString(),
+        pickup_date: pickupDate.toISOString()
+    };
+
+    // Daten an den Server senden
+    fetch('http://localhost:5000/api/registration', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
         .then(response => {
             if (response.ok) {
                 document.getElementById('confirmationMessage').textContent =
-                    `Vielen Dank, ${customerName}! Ihr Serviceauftrag wurde erfolgreich eingereicht. Abholdatum: ${pickupDate}`;
+                    `Vielen Dank, ${name}! Ihr Serviceauftrag wurde erfolgreich eingereicht. Abholdatum: ${pickupDate.toISOString().split('T')[0]}`;
+                document.getElementById('confirmationMessage').classList.add('text-success');
             } else {
                 document.getElementById('confirmationMessage').textContent =
                     'Fehler beim Absenden. Bitte versuchen Sie es erneut.';
+                document.getElementById('confirmationMessage').classList.add('text-danger');
             }
         })
-        .catch(error => console.error('Error:', error));
-    } else {
-        alert('Bitte überprüfen Sie Ihre Eingaben.');
-    }
+        .catch(error => {
+            console.error('Fehler:', error);
+            document.getElementById('confirmationMessage').textContent =
+                'Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
+            document.getElementById('confirmationMessage').classList.add('text-danger');
+        });
 }
