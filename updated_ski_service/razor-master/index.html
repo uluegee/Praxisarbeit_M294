@@ -10,6 +10,40 @@
 <link rel="stylesheet" type="text/css" href="css/loaders.css"/>
 <!-- Font-Awesome Style CSS File -->
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+<style>
+.info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Schleier */
+    z-index: 1; /* Über dem Hintergrundbild, aber hinter dem Text */
+}
+
+.info-section > .container {
+    position: relative;
+    z-index: 2; /* Text über der Überlagerung */
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Schleier */
+    z-index: 1; /* Über dem Hintergrundbild, aber hinter dem Text */
+}
+
+#about > .container {
+    position: relative;
+    z-index: 2; /* Text über der Überlagerung */
+}
+
+</style>
 <body>
 
 <!-- Page loading animation  Test-->
@@ -81,7 +115,8 @@
 	background-repeat: no-repeat; 
 	background-position: center; 
 	width: 100%vw; 
-	height: 100vh;">">
+	height: 80vh;
+	position: relative;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -127,7 +162,12 @@
 </section>
 
 <!-- Content block 1 -->
-<section id="about" class="copy-content-sec sec-bg-02 h-100" style="background-image: url(img/aboutus.jpg);">
+<section id="about" class="copy-content-sec sec-bg-02 h-100" style="background-image: url(img/aboutus.jpg); 	background-size: cover; 
+background-repeat: no-repeat; 
+background-position: center; 
+width: 100%vw; 
+height: 70vh;
+position: relative;">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5 col-md-12 copy-container ml-auto">
