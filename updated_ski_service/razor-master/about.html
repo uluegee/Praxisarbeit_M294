@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ski Service Ski</title>
+    <!-- bootstrap Style CSS File -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Custom Style CSS File -->
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.css" />
+    <!-- Font-Awesome Style CSS File -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="font-awesome/css/font-awesome.min.css"
+    />
+    <style>
+      /* Styling für den About-Us-Container */
+      .about-container {
+        background-color: rgba(255, 255, 255, 0.9); /* Halbtransparentes Weiß */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+        padding: 20px;
+        margin-top: 50px;
+      }
+      .about-container h2 {
+        font-weight: bold;
+        color: #2a9df4; /* Blau passend zur Ski-Thematik */
+      }
+      .about-container p {
+        color: #333; /* Dunkelgrauer Text */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page loading animation  Test-->
+    <div class="loader loader-bg">
+      <div class="loader-inner ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md fixed-top top-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><strong>Ski-Service</strong></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="img/icons/menu.png"
+          /></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto text-sm-right text-md-right">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Über uns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Registrieren</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bestellung.html">Service buchen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Three -->
+    <section
+      id="home"
+      class="intro bg-overlay parallax"
+      style="
+        background-image: url(img/skifahrerbild.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%vw;
+        height: 100%vh;
+        display: flex;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
+            <div class="intro-caption mt-5">
+              <h1 class="text-primary mb-2">
+                Perfekte Kanten. Sicherer Halt. Unvergessliche Abfahrten
+              </h1>
+              <p class="text-white mb-4">
+                Ski-Service für deine besten Wintermomente!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </section>
+
+    <!-- Footer Block -->
+    <div class="copy-footer bg-primary py-2">
+      <div class="container text-center text-light">
+        &copy; <a href="" target="_blank">Ski-Service.com</a>
+        <span id="year"></span>. Alle Rechte Behalten.
+      </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gmap-custom.js"></script>
+    <script src="js/core.js"></script>
+  </body>
+</html>
