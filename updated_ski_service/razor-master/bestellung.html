@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Ski Service Ski</title>
-    <!-- Bootstrap Style CSS File -->
+    <!-- bootstrap Style CSS File -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Custom Style CSS File -->
     <link rel="stylesheet" type="text/css" href="css/custom-style.css" />
@@ -13,8 +13,106 @@
       type="text/css"
       href="font-awesome/css/font-awesome.min.css"
     />
+    <style>
+      /* Optimiertes Styling für das Formular */
+      #service-form .form-control,
+      #service-form .form-select,
+      #service-form .form-check-input {
+        background-color: transparent; /* Entfernt Hintergrund */
+        border: 1px solid #ccc; /* Leichte Rahmenlinie */
+        color: #333; /* Dunkler Text */
+      }
+
+      #service-form .form-control:focus,
+      #service-form .form-select:focus,
+      #service-form .form-check-input:focus {
+        box-shadow: none; /* Entfernt Fokus-Schattierung */
+        border-color: #007bff; /* Fokusfarbe */
+      }
+
+      #service-form button {
+        background-color: #007bff; /* Standard-Bootstrap-Blau */
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      #service-form button:hover {
+        background-color: #0056b3; /* Dunkleres Blau bei Hover */
+      }
+
+      .card {
+        border: none; /* Entfernt Rahmen um die Karte */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Weicher Schatten */
+        .priority-table {
+          margin-top: 30px;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        /* Styling für das Dropdown */
+.styled-dropdown select {
+  background-color: #f9f9f9; /* Heller Hintergrund */
+  border: 2px solid #007bff; /* Blaue Umrandung */
+  border-radius: 8px; /* Abgerundete Ecken */
+  padding: 10px; /* Innenabstand */
+  font-size: 16px; /* Größere Schrift */
+  color: #333; /* Dunkler Text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Weicher Schatten */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.styled-dropdown select:focus {
+  outline: none; /* Entfernt Standard-Fokus */
+  border-color: #0056b3; /* Dunklere Umrandung bei Fokus */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
+}
+
+.styled-dropdown select option {
+  padding: 10px; /* Abstand für Optionen */
+  background-color: #ffffff; /* Weißer Hintergrund */
+  color: #333; /* Textfarbe */
+}
+
+
+        .priority-table th,
+        .priority-table td {
+          padding: 10px;
+          text-align: center;
+        }
+
+        .priority-table th {
+          background-color: #007bff;
+        }
+
+        .priority-table td {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary {
+          background-color: #007bff;
+          border: none;
+          transition: 0.3s ease;
+        }
+
+        .btn-primary:hover {
+          background-color: #0056b3;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Page loading animation -->
+    <div class="loader loader-bg">
+      <div class="loader-inner ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
     <!-- Top navigation -->
     <nav class="navbar navbar-expand-md fixed-top top-nav">
       <div class="container-fluid">
@@ -34,10 +132,13 @@
             ><img src="img/icons/menu.png"
           /></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto text-sm-right text-md-right">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="service.html">Services</a>
@@ -68,13 +169,28 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        width: 100vw;
+        width: 100%vw;
         height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       "
     >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
+            <div class="intro-caption mt-5">
+              <h1 class="text-primary mb-2">
+                Perfekte Kanten. Sicherer Halt. Unvergessliche Abfahrten
+              </h1>
+              <p class="text-white mb-4">
+                Ski-Service für deine besten Wintermomente!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Booking Form -->
+    <section id="service-form" class="py-5" style="background-color: gray">
       <div class="container">
         <div class="card shadow-lg border-0 p-4">
           <form
@@ -175,7 +291,7 @@
                   class="form-check-input"
                   id="checkbox2"
                   name="additionalOptions"
-                  value="Fell zuschneiden"
+                  value="Fell zuschneide"
                 />
                 <label for="checkbox2" class="form-check-label"
                   >Fell zuschneiden</label
@@ -196,24 +312,65 @@
             </div>
 
             <!-- Dropdown -->
-            <h4 class="mb-3">Bearbeitungszeit</h4>
+            <h4 class="mb-3 text-primary">Bearbeitungszeit</h4>
             <div class="mb-3">
-              <label for="specialities" class="form-label">Spezialitäten</label>
-              <select
-                class="form-select"
-                id="specialities"
-                name="specialities"
-                required
+              <label for="specialities" class="form-label fw-bold text-dark"
+                >Wählen Sie die gewünschte Priorität:</label
               >
-                <option value="" selected disabled>
-                  Bitte wählen Sie eine Option
-                </option>
-                <option value="normal">Normal (7 Tage)</option>
-                <option value="express">Schnellservice (3 Tage)</option>
-                <option value="standard">Standard (5 Tage)</option>
-              </select>
+              <div class="styled-dropdown">
+                <span class="input-group-text bg-primary text-white">
+              
+                </span>
+                <select
+                  class="form-select border-primary shadow-sm"
+                  id="specialities"
+                  name="specialities"
+                  required
+                >
+                  <!-- Standardoption -->
+                  <option value="" selected disabled>
+                    Bitte wählen Sie eine Option
+                  </option>
+                  <!-- Weitere Optionen -->
+                  <option value="normal">Normal (7 Tage)</option>
+                  <option value="express">Schnellservice (3 Tage)</option>
+                  <option value="standard">Standard (5 Tage)</option>
+                </select>
+              </div>
+              <small class="text-muted"
+                >Die Bearbeitungszeit beeinflusst die Dauer der
+                Fertigstellung.</small
+              >
             </div>
 
+        <!-- Tabelle -->
+        <table class="table priority-table mt-4">
+          <thead>
+            <tr>
+              <th>Priorität</th>
+              <th>Zusätzliche Tage</th>
+              <th>Total Tage bis zur Fertigstellung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tief</td>
+              <td>+5</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Standard</td>
+              <td>0</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Express</td>
+              <td>-2</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
             <!-- Abschicken -->
             <div class="mt-4">
               <button type="submit" class="btn btn-primary w-100">
@@ -224,6 +381,14 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <div class="copy-footer bg-primary py-2">
+      <div class="container text-center text-light">
+        &copy; <a href="" target="_blank">Ski-Service.com</a>
+        <span id="year"></span>. Alle Rechte Behalten.
+      </div>
+    </div>
 
     <!-- Javascript Files -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
