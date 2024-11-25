@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum - Ski-Service</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        background-image: url("img/skifahrerbild.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Schwarze Überlagerung mit 50% Transparenz */
+        z-index: -1;
+      }
+      a {
+        color: #b57f38;
+      }
+
+      .impressum-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 80px;
+      }
+
+      .impressum-container h1,
+      .impressum-container h2,
+      .impressum-container h3 {
+        color: #b57f38;
+      }
+
+      .breadcrumb {
+        margin-top: 60px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      .breadcrumb a {
+        color: #b57f38;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md fixed-top top-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><strong>JetStream Ski-Service</strong></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="img/icons/menu.png"
+          /></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto text-sm-right text-md-right">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Über uns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Registrieren</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bestellung.html">Service buchen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb mt-5" style="color: white">
+      <a href="index.html">Home</a> &gt; Impressum
+    </div>
+
+    <!-- Impressum Content -->
+    <div class="container impressum-container">
+      <h1 class="text-center mb-4">Impressum</h1>
+      <section class="mb-4">
+        <h2>Angaben zur Webseite</h2>
+        <p>
+          Betreiber der Webseite:<br />
+          Lenny Brun & Ege Ulu<br />
+          Bahnhofstrasse 10<br />
+          8001, Zürich<br />
+          Schweiz
+        </p>
+      </section>
+      <section class="mb-4">
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: +41 79 123 45 67<br />
+          E-Mail: info@ski-service.com
+        </p>
+      </section>
+      <section class="mb-4">
+        <h2>Haftungsausschluss</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>
+          Die Inhalte unserer Website wurden mit größter Sorgfalt erstellt. Wir
+          übernehmen jedoch keine Gewähr für die Richtigkeit, Vollständigkeit
+          und Aktualität der Inhalte. Als Webseitenbetreiber sind wir für eigene
+          Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+          verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder
+          gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
+          forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        </p>
+        <h3>Haftung für Links</h3>
+        <p>
+          Unsere Webseite enthält Links zu externen Webseiten Dritter, auf deren
+          Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
+          fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der
+          verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+          Seiten verantwortlich. Zum Zeitpunkt der Verlinkung wurden die Seiten
+          auf mögliche Rechtsverstöße überprüft, wobei rechtswidrige Inhalte
+          nicht erkennbar waren.
+        </p>
+      </section>
+      <section class="mb-4">
+        <h2>Urheberrecht</h2>
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser
+          Webseite unterliegen dem schweizerischen Urheberrecht. Beiträge
+          Dritter sind als solche gekennzeichnet. Die Vervielfältigung,
+          Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts
+          bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+          Erstellers. Downloads und Kopien dieser Seite sind nur für den
+          privaten, nicht kommerziellen Gebrauch gestattet.
+        </p>
+      </section>
+    </div>
+
+    <!-- Footer Block -->
+    <div class="copy-footer py-3" style="background-color: #b57f38">
+      <div class="container text-center text-light">
+        <p class="mb-1">
+          &copy;
+          <a href="#" class="text-light" target="_blank">Ski-Service.com</a>
+          <span id="year"></span>. Alle Rechte vorbehalten.
+        </p>
+        <p class="mb-0">
+          Website erstellt und betrieben von <strong>Lenny Brun</strong> und
+          <strong>Ege Ulu</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gmap-custom.js"></script>
+    <script src="js/core.js"></script>
+    <script>
+      // Automatisch das aktuelle Jahr einfügen
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
