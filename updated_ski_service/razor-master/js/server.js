@@ -23,7 +23,6 @@ function handleFormSubmit(event) {
 
     const service = `Service: ${allgemeinservice}, Additional Options: ${additionalOptions.join(', ')}`;
 
-
     // Validierung der Eingaben
     if (!validateEmail(email)) {
         alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
@@ -75,6 +74,11 @@ function handleFormSubmit(event) {
                 document.getElementById('confirmationMessage').textContent =
                     `Vielen Dank, ${name}! Ihr Serviceauftrag wurde erfolgreich eingereicht. Abholdatum: ${pickupDate.toISOString().split('T')[0]}`;
                 document.getElementById('confirmationMessage').classList.add('text-success');
+
+                // Bestätigung hinzufügen
+                if (confirm('Ihre Eingaben wurden erfolgreich übermittelt. Möchten Sie die Seite neu laden?')) {
+                    location.reload(); // Seite neu laden, falls der Benutzer bestätigt
+                }
             } else {
                 document.getElementById('confirmationMessage').textContent =
                     'Fehler beim Absenden. Bitte versuchen Sie es erneut.';
