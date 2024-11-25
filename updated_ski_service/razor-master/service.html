@@ -1,160 +1,199 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Ski Service Ski</title>
-</head>
-<!-- bootstrap Style CSS File -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Custom Style CSS File -->
-<link rel="stylesheet" type="text/css" href="css/custom-style.css">
-<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
-<!-- Font-Awesome Style CSS File -->
-<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-<body>
+  <head>
+    <title>Ski Service Ski</title>
+  </head>
+  <!-- bootstrap Style CSS File -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Custom Style CSS File -->
+  <link rel="stylesheet" type="text/css" href="css/custom-style.css" />
+  <link rel="stylesheet" type="text/css" href="css/loaders.css" />
+  <!-- Font-Awesome Style CSS File -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="font-awesome/css/font-awesome.min.css"
+  />
+  <body>
+    <!-- Page loading animation  Test-->
+    <div class="loader loader-bg">
+      <div class="loader-inner ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md fixed-top top-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><strong>JetStream Ski-Service</strong></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="img/icons/menu.png"
+          /></span>
+        </button>
 
-<!-- Page loading animation  Test-->
-<div class="loader loader-bg">
-	<div class="loader-inner ball-pulse">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-</div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto text-sm-right text-md-right">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Über uns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Registrieren</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bestellung.html">Service buchen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<!-- Top navigation -->
-<nav class="navbar navbar-expand-md fixed-top top-nav">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="index.html"><strong>JetStream Ski-Service</strong></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto text-sm-right text-md-right">
-				<li class="nav-item">
-					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="service.html">Services</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="about.html">Über uns</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="login.html">Login</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="register.html">Registrieren</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="bestellung.html">Service buchen</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-
-<!-- Intro Three -->
-<section id="home" class="intro bg-overlay parallax" style="
-	background-image: url(img/skifahrerbild.jpg); 
-	background-size: cover; 
-	background-repeat: no-repeat; 
-	background-position: center; 
-	width: 100%vw; 
-	height: 100vh;">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
-				<div class="intro-caption mt-5">
-				<h1 class="text-primary mb-2">Perfekte Kanten. Sicherer Halt. Unvergessliche Abfahrten</h1>
-				<p class="text-white mb-4"> Ski-Service für deine besten Wintermomente!</p>
-				
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Info block 1 -->
-<section id="services" class="info-section text-white bg-right bg-dark" style="background-image: url(img/services.jpg);
-	background-size: cover; 
-	background-repeat: no-repeat; 
-	background-position: center; 
-	width: 100%vw; 
-	height: 100vh;">">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8">
-				<div class="head-box">
-					<h2 class="font-abril text-primary">Services die wir anbieten</h2>
-				</div>
-				<div class="three-panel-block mt-5">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="service-block mb-5">
-								<i class="icon-box mb-3 float-left w-100"><img src="img/icons/ski (1).png" class="img-fluid"></i>
-								<h3 class="text-primary">Ski-Wachsen</h3>
-								<p>Verbesserung der Gleiteigenschaften für alle Schneebedingungen.</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="service-block mb-5">
-								<i class="icon-box mb-3 float-left w-100"><img src="img/icons/schleifen (1).png" class="img-fluid"></i>
-								<h3 class="text-primary">Kantenschleifen</h3>
-								<p>Schärfen der Skikanten für optimale Kontrolle und präzise Kurven.</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="service-block mb-5">
-								<i class="icon-box mb-3 float-left w-100"><img src="img/icons/ski-stiefel (1).png" class="img-fluid"></i>
-								<h3 class="text-primary">Bindungskontrolle und -einstellung</h3>
-								<p>Prüfung und Anpassung der Bindungen für maximale Sicherheit auf der Piste.</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="service-block mb-5">
-								<i class="icon-box mb-3 float-left w-100"><img src="img/icons/service (1).png" class="img-fluid"></i>
-								<h3 class="text-primary">Komplettservice</h3>
-								<p>Rundum-Paket: Kantenschliff, Wachsen, Belag-Reparatur und Bindungsprüfung.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Info block 2 -->
+    <section
+      id="price"
+      class="info-section sec-bg-03 bg-overlay"
+      style="background-image: url(img/preis.jpg)"
+    >
+      <div class="container text-white">
+        <div class="head-box text-center mb-5">
+          <h2 class="font-abril text-primary">Unsere unvergesslichen Preise</h2>
+        </div>
+        <div class="three-panel-block my-4">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Item 1 -->
+            <div class="col">
+              <div class="service-block-bg text-center p-3 h-100">
+                <div class="price-count font-abril"><span>CHF</span>150</div>
+                <h3>Heisswachsen</h3>
+                <p class="px-4">
+                  Ein spezielles Heißwachsverfahren, bei dem hochwertiges Wachs
+                  tief in die Belagstruktur eingearbeitet wird. Dies verbessert
+                  die Gleiteigenschaften und erhöht die Lebensdauer Ihrer Ski
+                  oder Snowboards. Perfekt für anspruchsvolle Schneebedingungen.
+                </p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="col">
+              <div class="service-block-bg text-center p-3 h-100">
+                <div class="price-count font-abril"><span>CHF</span>40</div>
+                <h3>Fell zuschneiden</h3>
+                <p class="px-4">
+                  Individuelles Zuschneiden von Steigfellen für Ski oder
+                  Splitboards, angepasst an die spezifischen Maße und
+                  Anforderungen Ihrer Ausrüstung. Garantiert besten Halt und
+                  optimale Effizienz bei Aufstiegen im Gelände.
+                </p>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="col">
+              <div class="service-block-bg text-center p-3 h-100">
+                <div class="price-count font-abril"><span>CHF</span>55</div>
+                <h3>Rennski-Service</h3>
+                <p class="px-4">
+                  Ein spezialisierter Service für Rennski, der präzises
+                  Kantenschleifen, Wachsen mit Hochleistungswachsen und eine
+                  individuelle Einstellung umfasst. Entwickelt für maximale
+                  Geschwindigkeit und Performance.
+                </p>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="col">
+              <div class="service-block-bg text-center p-3 h-100">
+                <div class="price-count font-abril"><span>CHF</span>35</div>
+                <h3>Bindungskontrolle</h3>
+                <p class="px-4">
+                  Montage und fachgerechte Einstellung der Skibindungen für
+                  optimale Sicherheit und Komfort auf der Piste. Einschließlich
+                  Anpassung an die persönlichen Anforderungen des Fahrers.
+                </p>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="col" style="margin-top: 20px">
+              <div class="service-block-bg text-center p-3 h-100">
+                <div class="price-count font-abril"><span>CHF</span>40</div>
+                <h3>Kleiner Service</h3>
+                <p class="px-4">
+                  Ein Basisservice für Ihre Ski oder Snowboards, der das Wachsen
+                  und eine grundlegende Pflege beinhaltet. Ideal für Skifahrer,
+                  die ihre Ausrüstung regelmäßig nutzen und in gutem Zustand
+                  halten möchten.
+                </p>
+              </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="col" style="margin-top: 20px">
+              <div class="service-block-bg text-center p-3 h-100">
+                <div class="price-count font-abril"><span>CHF</span>40</div>
+                <h3>Grosser Service</h3>
+                <p class="px-4">
+                  Ein umfassender Service, der Wachsen, Kantenschleifen und die
+                  Reparatur kleiner Schäden am Belag umfasst. Perfekt für eine
+                  gründliche Vorbereitung vor der Skisaison.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer Block -->
     <div class="copy-footer py-3" style="background-color: #b57f38">
-		<div class="container text-center text-light">
-		  <p class="mb-1">
-			&copy;
-			<a href="#" class="text-light" target="_blank">Ski-Service.com</a>
-			<span id="year"></span>. Alle Rechte vorbehalten.
-			<a
-			  href="impressum.html"
-			  style="color: white; text-decoration: underline"
-			  >Impressum</a
-			>
-		  </p>
-		  <p class="mb-0">
-			Website erstellt und betrieben von <strong>Lenny Brun</strong> und
-			<strong>Ege Ulu</strong>.
-		  </p>
-		</div>
-	  </div>
-    </body>
+      <div class="container text-center text-light">
+        <p class="mb-1">
+          &copy;
+          <a href="#" class="text-light" target="_blank">Ski-Service.com</a>
+          <span id="year"></span>. Alle Rechte vorbehalten.
+          <a
+            href="impressum.html"
+            style="color: white; text-decoration: underline"
+            >Impressum</a
+          >
+        </p>
+        <p class="mb-0">
+          Website erstellt und betrieben von <strong>Lenny Brun</strong> und
+          <strong>Ege Ulu</strong>.
+        </p>
+      </div>
+    </div>
+  </body>
 
-<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-<script src="js/bootstrap.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-<script src="js/gmap-custom.js" ></script>
-<script src="js/core.js"></script>
-    <!-- Javascript Files -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      // Automatisch das aktuelle Jahr einfügen
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+  <script src="js/gmap-custom.js"></script>
+  <script src="js/core.js"></script>
+  <!-- Javascript Files -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    // Automatisch das aktuelle Jahr einfügen
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </html>
