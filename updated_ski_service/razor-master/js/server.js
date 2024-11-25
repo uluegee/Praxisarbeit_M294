@@ -48,7 +48,7 @@ function handleFormSubmit(event) {
     // Datum erstellen
     const currentDate = new Date();
     const pickupDate = new Date();
-    pickupDate.setDate(currentDate.getDate() + (priority === 'express' ? 3 : priority === 'normal' ? 7 : 5));
+    pickupDate.setDate(currentDate.getDate() + (priority === 'express' ? 5 : priority === 'normal' ? 7 : 12));
 
     // Daten vorbereiten
     const data = {
