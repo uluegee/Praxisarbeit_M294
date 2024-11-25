@@ -83,7 +83,7 @@
         }
 
         .priority-table th {
-          background-color: #007bff;
+          background-color: #b57f38;
         }
 
         .priority-table td {
@@ -91,13 +91,13 @@
         }
 
         .btn-primary {
-          background-color: #007bff;
+          background-color: #b57f38;
           border: none;
           transition: 0.3s ease;
         }
 
         .btn-primary:hover {
-          background-color: #0056b3;
+          background-color: green;
         }
       }
     </style>
@@ -202,7 +202,7 @@
             <h1 class="text-center mb-4 text-primary">Service buchen</h1>
 
             <!-- Persönliche Informationen -->
-            <h4 class="mb-3">Persönliche Informationen</h4>
+            <h4 class="mb-3 text-primary">Persönliche Informationen</h4>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="name" class="form-label">Name</label>
@@ -240,7 +240,7 @@
             </div>
 
             <!-- Radio Buttons -->
-            <h4 class="mb-3">Service auswählen</h4>
+            <h4 class="mb-3 text-primary">Service auswählen</h4>
             <div class="mb-3" style="margin-left: 20px">
               <div class="form-check">
                 <input
@@ -270,7 +270,7 @@
             </div>
 
             <!-- Checkboxen -->
-            <h4 class="mb-3">Zusätzliche Optionen</h4>
+            <h4 class="mb-3 text-primary">Zusätzliche Optionen</h4>
             <div class="mb-3" style="margin-left: 20px">
               <div class="form-check">
                 <input
@@ -369,7 +369,11 @@
             </table>
             <!-- Abschicken -->
             <div class="mt-4">
-              <button type="submit" class="btn btn-primary w-100">
+              <button
+                type="submit"
+                class="btn w-100"
+                style="background-color: #b57f38"
+              >
                 Service buchen
               </button>
             </div>
@@ -379,10 +383,17 @@
     </section>
 
     <!-- Footer -->
-    <div class="copy-footer bg-primary py-2">
+    <div class="copy-footer bg-primary py-3">
       <div class="container text-center text-light">
-        &copy; <a href="" target="_blank">Ski-Service.com</a>
-        <span id="year"></span>. Alle Rechte Behalten.
+        <p class="mb-1">
+          &copy;
+          <a href="#" class="text-light" target="_blank">Ski-Service.com</a>
+          <span id="year"></span>. Alle Rechte vorbehalten.
+        </p>
+        <p class="mb-0">
+          Website erstellt und betrieben von <strong>Lenny Brun</strong> und
+          <strong>Ege Ulu</strong>.
+        </p>
       </div>
     </div>
 
@@ -391,5 +402,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/core.js"></script>
     <script src="js/server.js"></script>
+    <script>
+      // Automatisch das aktuelle Jahr einfügen
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

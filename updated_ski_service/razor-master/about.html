@@ -154,10 +154,17 @@
     </section>
 
     <!-- Footer Block -->
-    <div class="copy-footer bg-primary py-2">
+    <div class="copy-footer bg-primary py-3">
       <div class="container text-center text-light">
-        &copy; <a href="" target="_blank">Ski-Service.com</a>
-        <span id="year"></span>. Alle Rechte Behalten.
+        <p class="mb-1">
+          &copy;
+          <a href="#" class="text-light" target="_blank">Ski-Service.com</a>
+          <span id="year"></span>. Alle Rechte vorbehalten.
+        </p>
+        <p class="mb-0">
+          Website erstellt und betrieben von <strong>Lenny Brun</strong> und
+          <strong>Ege Ulu</strong>.
+        </p>
       </div>
     </div>
 
@@ -166,5 +173,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/gmap-custom.js"></script>
     <script src="js/core.js"></script>
+    <script>
+      // Automatisch das aktuelle Jahr einfügen
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
