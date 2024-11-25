@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktieren Sie uns für den besten Skiservice!">
+    <meta name="author" content="Ihr Skiservice-Team">
+    <title>JetStream Ski-Service</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome for Social Media Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --primary-dark: #b8860b; /* Dunkleres Gold */
+            --text-color: #f8f9fa; /* Weißlich für Kontraste */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation Styles */
+        .navbar-dark .navbar-nav .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Section Contact */
+        section#contact {
+            background-image: url('img/contact-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: var(--text-color);
+            padding: 60px 0;
+        }
+
+        section#contact h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        section#contact p.lead {
+            font-size: 1.2rem;
+        }
+
+        .contact-details {
+            background: var(--primary-color);
+            color: var(--text-color);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details h4,
+        .contact-details h5 {
+            font-weight: bold;
+        }
+
+        .contact-details p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p strong {
+            color: var(--text-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: var(--text-color);
+            padding: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JetStream Ski-Service</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Registrieren</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bestellung.html">Service buchen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="text" style="color: #b8860b;">Kontaktieren Sie uns</h2>
+                    <p class="lead">Wir freuen uns, von Ihnen zu hören! Nutzen Sie die unten angegebenen Kontaktdaten, um mit uns in Verbindung zu treten.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="contact-details">
+                        <h4>Unsere Kontaktdaten</h4>
+                        <p><strong>Adresse:</strong> 123 Skistraße, 98765 Winterstadt</p>
+                        <p><strong>Telefon:</strong> +41 123 456 789</p>
+                        <p><strong>E-Mail:</strong> info@skiservice.ch</p>
+                        <h5 class="mt-4">Öffnungszeiten</h5>
+                        <p>Montag - Freitag: 08:00 - 18:00</p>
+                        <p>Samstag: 09:00 - 14:00</p>
+                        <p>Sonntag: Geschlossen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Skiservice. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
